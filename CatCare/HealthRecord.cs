@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CatCare
 {
-    internal class HealthRecord
+    public class HealthRecord
     {
         public int CatId { get; set; }
         public DateTime Date { get; set; }

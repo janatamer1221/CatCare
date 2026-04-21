@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CatCare
 {
-    internal enum HealthStatus
+    public enum HealthStatus
     {
         Healthy,
         Sick

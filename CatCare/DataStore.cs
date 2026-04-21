@@ -1,23 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace CatCare
 {
-    internal class DataStore
+    public static class DataStore
     {
-        public Cat[] Cats = new Cat[100];
-        public int CatCount = 0;
+        private static string filePath = "cats_data.txt";
 
-        public void AddCat(Cat cat)
+        public static void SaveAllData(List<Cat> cats)
         {
-            if (CatCount < Cats.Length)
+            try
             {
-                Cats[CatCount] = cat;
-                CatCount++;
+                using (StreamWriter sw = new StreamWriter(filePath))
+                {
+                    foreach (var cat in cats)
+                    {
+                        // بنسيف: الاسم,العمر,الحالة
+                        sw.WriteLine($"{cat.Name},{cat.Age},{cat.HealthStatus}");
+                    }
+                }
             }
+            catch (Exception ex) { }
+        }
+
+        public static List<Cat> LoadAllData()
+        {
+            List<Cat> cats = new List<Cat>();
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    string[] lines = File.ReadAllLines(filePath);
+                    foreach (var line in lines)
+                    {
+                        var data = line.Split(',');
+                        cats.Add(new Cat { Name = data[0], Age = int.Parse(data[1]) });
+                    }
+                }
+            }
+            catch (Exception ex) { }
+            return cats;
         }
     }
 }

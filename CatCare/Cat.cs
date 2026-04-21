@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CatCare
 {
-    internal class Cat
+    public class Cat
     {
         public int Id { get; set; }
         public string Name { get; set; }
