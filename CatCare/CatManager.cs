@@ -113,6 +113,18 @@ namespace CatCare
 
             return "Cat is successfully updated!";
         }
+        public string AddScheduleToCat(string catName, Schedule newSchedule)
+        {
+            Cat cat = SearchCat(catName);
+
+            if (cat == null)
+                return "Cat not found!";
+            cat.Schedules.Add(newSchedule);
+
+            DataStore.SaveAllData(allCats.ToList());
+
+            return $"Schedule added for {catName} successfully!";
+        }
     }
 }
     
