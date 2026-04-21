@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CatCare
 {
-    internal class Schedule
+    public class Schedule
     {
         public int CatId { get; set; }
         public ScheduleType Type { get; set; }

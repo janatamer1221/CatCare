@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CatCare
 {
-    internal enum ScheduleType
+    public enum ScheduleType
     {
         Meal,
         Vaccine
