@@ -125,6 +125,35 @@ namespace CatCare
 
             return $"Schedule added for {catName} successfully!";
         }
+        public Cat GetCatById(int id)
+        {
+            foreach (Cat c in allCats)
+            {
+                if (c.Id == id)
+                    return c;
+            }
+            return null;
+        }
+
+        public string AddHealthRecordToCat(int catId, HealthRecord record)
+        {
+            Cat cat = GetCatById(catId);
+            if (cat == null) return "Cat not found!";
+            cat.HealthRecords.Add(record);
+            DataStore.SaveAllData(allCats.ToList());
+            return "Health record added successfully!";
+        }
+
+        public Cat[] GetSickCats()
+        {
+            Cat[] sickCats = new Cat[0];
+            foreach (Cat cat in allCats)
+            {
+                if (cat.HealthStatus == HealthStatus.Sick)
+                    sickCats = AddToArray(sickCats, cat);
+            }
+            return sickCats;
+        }
     }
 }
     
