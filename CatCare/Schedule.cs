@@ -17,5 +17,22 @@ namespace CatCare
         {
             return Date <= DateTime.Now.AddDays(1);
         }
+        public string GetTimeRemaining()
+        {
+            TimeSpan remaining = Date - DateTime.Now;
+
+            if (remaining.TotalMinutes < 0)
+                return "Appointment passed!";
+
+            if (remaining.TotalHours < 1)
+                return $"{(int)remaining.TotalMinutes} minutes remaining";
+
+            if (remaining.TotalDays < 1)
+                return $"{(int)remaining.TotalHours} hours remaining";
+
+            return $"{(int)remaining.TotalDays} days remaining";
+        }
     }
 }
+
+           
