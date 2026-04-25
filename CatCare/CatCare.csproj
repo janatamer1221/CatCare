@@ -64,11 +64,23 @@
     <Compile Include="Schedule.cs" />
     <Compile Include="ScheduleTimer.cs" />
     <Compile Include="ScheduleType.cs" />
+    <Compile Include="UC_HealthRecords.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_HealthRecords.Designer.cs">
+      <DependentUpon>UC_HealthRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_ManageCats.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_ManageCats.Designer.cs">
       <DependentUpon>UC_ManageCats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Schedules.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Schedules.Designer.cs">
+      <DependentUpon>UC_Schedules.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -83,8 +95,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC_HealthRecords.resx">
+      <DependentUpon>UC_HealthRecords.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_ManageCats.resx">
       <DependentUpon>UC_ManageCats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Schedules.resx">
+      <DependentUpon>UC_Schedules.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -119,6 +137,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-cat-footprint-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-vet-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

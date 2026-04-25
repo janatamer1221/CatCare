@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.pnlContainer = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnHealthRecords = new System.Windows.Forms.Button();
+            this.btnSchedules = new System.Windows.Forms.Button();
+            this.btnManageCats = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlSideBar.SuspendLayout();
-            this.pnlContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSideBar
             // 
-            this.pnlSideBar.BackColor = System.Drawing.SystemColors.Desktop;
-            this.pnlSideBar.Controls.Add(this.button3);
-            this.pnlSideBar.Controls.Add(this.button2);
-            this.pnlSideBar.Controls.Add(this.button1);
+            this.pnlSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.pnlSideBar.Controls.Add(this.btnHealthRecords);
+            this.pnlSideBar.Controls.Add(this.btnSchedules);
+            this.pnlSideBar.Controls.Add(this.btnManageCats);
             this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSideBar.Location = new System.Drawing.Point(0, 0);
             this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(270, 450);
+            this.pnlSideBar.Size = new System.Drawing.Size(270, 592);
             this.pnlSideBar.TabIndex = 0;
             this.pnlSideBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.pnlSideBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -55,111 +55,111 @@
             // 
             // pnlContainer
             // 
-            this.pnlContainer.BackColor = System.Drawing.Color.LightGray;
-            this.pnlContainer.Controls.Add(this.button4);
+            this.pnlContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
+            this.pnlContainer.BackgroundImage = global::CatCare.Properties.Resources.Untitled_design__1_;
+            this.pnlContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainer.Location = new System.Drawing.Point(270, 0);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(530, 450);
+            this.pnlContainer.Size = new System.Drawing.Size(881, 592);
             this.pnlContainer.TabIndex = 1;
             // 
-            // button3
+            // btnHealthRecords
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::CatCare.Properties.Resources.icons8_cat_footprint_24;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 100);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(270, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Health Records";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnHealthRecords.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHealthRecords.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHealthRecords.FlatAppearance.BorderSize = 0;
+            this.btnHealthRecords.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnHealthRecords.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnHealthRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHealthRecords.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHealthRecords.ForeColor = System.Drawing.Color.White;
+            this.btnHealthRecords.Image = global::CatCare.Properties.Resources.icons8_cat_footprint_24;
+            this.btnHealthRecords.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHealthRecords.Location = new System.Drawing.Point(0, 100);
+            this.btnHealthRecords.Name = "btnHealthRecords";
+            this.btnHealthRecords.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnHealthRecords.Size = new System.Drawing.Size(270, 50);
+            this.btnHealthRecords.TabIndex = 2;
+            this.btnHealthRecords.Text = "Health Records";
+            this.btnHealthRecords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHealthRecords.UseVisualStyleBackColor = true;
+            this.btnHealthRecords.Click += new System.EventHandler(this.btnHealthRecords_Click);
             // 
-            // button2
+            // btnSchedules
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::CatCare.Properties.Resources.Cat_schedule1;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 50);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(270, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Schedules";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSchedules.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSchedules.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSchedules.FlatAppearance.BorderSize = 0;
+            this.btnSchedules.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSchedules.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSchedules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSchedules.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSchedules.ForeColor = System.Drawing.Color.White;
+            this.btnSchedules.Image = global::CatCare.Properties.Resources.Cat_schedule1;
+            this.btnSchedules.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSchedules.Location = new System.Drawing.Point(0, 50);
+            this.btnSchedules.Name = "btnSchedules";
+            this.btnSchedules.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnSchedules.Size = new System.Drawing.Size(270, 50);
+            this.btnSchedules.TabIndex = 1;
+            this.btnSchedules.Text = "Schedules";
+            this.btnSchedules.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSchedules.UseVisualStyleBackColor = true;
+            this.btnSchedules.Click += new System.EventHandler(this.btnSchedules_Click);
             // 
-            // button1
+            // btnManageCats
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::CatCare.Properties.Resources.icons8_cat_head_24;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(270, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Manage Cats";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnManageCats.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManageCats.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageCats.FlatAppearance.BorderSize = 0;
+            this.btnManageCats.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnManageCats.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnManageCats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageCats.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageCats.ForeColor = System.Drawing.Color.White;
+            this.btnManageCats.Image = global::CatCare.Properties.Resources.icons8_cat_head_24;
+            this.btnManageCats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageCats.Location = new System.Drawing.Point(0, 0);
+            this.btnManageCats.Name = "btnManageCats";
+            this.btnManageCats.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnManageCats.Size = new System.Drawing.Size(270, 50);
+            this.btnManageCats.TabIndex = 0;
+            this.btnManageCats.Text = "Manage Cats";
+            this.btnManageCats.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnManageCats.UseVisualStyleBackColor = true;
+            this.btnManageCats.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button4
+            // timer1
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(500, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 30);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "X";
-            this.button4.UseVisualStyleBackColor = true;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 60000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1151, 592);
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.pnlSideBar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cat Care Tracker";
             this.pnlSideBar.ResumeLayout(false);
-            this.pnlContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Button btnManageCats;
+        private System.Windows.Forms.Button btnSchedules;
+        private System.Windows.Forms.Button btnHealthRecords;
         private System.Windows.Forms.Panel pnlSideBar;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pnlContainer;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -12,17 +12,22 @@ namespace CatCare
 {
     public partial class Form1 : Form
     {
+        CatManager manager = new CatManager();
         bool isDragging = false;
         Point startPoint = new Point(0, 0);
+        ScheduleTimer appTimer;
         public Form1()
         {
             InitializeComponent();
-
+            
+            manager.LoadData(); 
+            appTimer = new ScheduleTimer(manager);
+            appTimer.Start();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-            isDragging  = true;
+            isDragging = true;
             startPoint = new Point(e.X, e.Y);
         }
 
@@ -36,15 +41,9 @@ namespace CatCare
             if (isDragging)
             {
                 Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this.startPoint.X , p.Y - this.startPoint.Y );
+                Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
             }
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Application.Exit(); //To close the application
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             pnlContainer.Controls.Clear(); //To delete whatever was in the pnlContainer
@@ -53,5 +52,40 @@ namespace CatCare
             ucCats.Dock = DockStyle.Fill; //will fill the pnlContainer screen
             pnlContainer.Controls.Add(ucCats); //show up in the pnlContainer
         }
+
+        private void btnSchedules_Click(object sender, EventArgs e)
+        {
+            pnlContainer.Controls.Clear();
+            UC_Schedules ucSchedules = new UC_Schedules();
+            ucSchedules.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(ucSchedules);
+        }
+
+        private void btnHealthRecords_Click(object sender, EventArgs e)
+        {
+            pnlContainer.Controls.Clear();
+            UC_HealthRecords ucHealth = new UC_HealthRecords();
+            ucHealth.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(ucHealth);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            foreach (var cat in manager.GetAllCats())
+            {
+                foreach (var sch in cat.Schedules)
+                {
+                    
+                    if (sch.IsUpcoming())
+                    {
+                        MessageBox.Show($"Reminder: {cat.Name} has a {sch.Type} coming up!\nNotes: {sch.Notes}",
+                                        "Schedule Alert",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                    }
+                }
+            }
+        }
     }
-}
+        }
+
