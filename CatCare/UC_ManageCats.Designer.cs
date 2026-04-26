@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.btnSickCats = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.numAge = new System.Windows.Forms.NumericUpDown();
             this.pnlfortxtbox = new System.Windows.Forms.Panel();
@@ -48,7 +49,6 @@
             this.colAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSickCats = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAge)).BeginInit();
@@ -77,6 +77,24 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(740, 205);
             this.pnlTop.TabIndex = 0;
+            // 
+            // btnSickCats
+            // 
+            this.btnSickCats.FlatAppearance.BorderSize = 0;
+            this.btnSickCats.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSickCats.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSickCats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSickCats.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSickCats.ForeColor = System.Drawing.Color.White;
+            this.btnSickCats.Image = global::CatCare.Properties.Resources.icons8_vet_24;
+            this.btnSickCats.Location = new System.Drawing.Point(422, 143);
+            this.btnSickCats.Name = "btnSickCats";
+            this.btnSickCats.Size = new System.Drawing.Size(115, 35);
+            this.btnSickCats.TabIndex = 13;
+            this.btnSickCats.Text = "Sick Cats";
+            this.btnSickCats.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSickCats.UseVisualStyleBackColor = true;
+            this.btnSickCats.Click += new System.EventHandler(this.btnSickCats_Click);
             // 
             // panel2
             // 
@@ -236,18 +254,18 @@
             this.labelAge.AutoSize = true;
             this.labelAge.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAge.ForeColor = System.Drawing.Color.White;
-            this.labelAge.Location = new System.Drawing.Point(36, 94);
+            this.labelAge.Location = new System.Drawing.Point(16, 94);
             this.labelAge.Name = "labelAge";
-            this.labelAge.Size = new System.Drawing.Size(36, 20);
+            this.labelAge.Size = new System.Drawing.Size(95, 20);
             this.labelAge.TabIndex = 2;
-            this.labelAge.Text = "Age";
+            this.labelAge.Text = "Age(Months)";
             // 
             // lablecatname
             // 
             this.lablecatname.AutoSize = true;
             this.lablecatname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lablecatname.ForeColor = System.Drawing.Color.White;
-            this.lablecatname.Location = new System.Drawing.Point(36, 40);
+            this.lablecatname.Location = new System.Drawing.Point(25, 46);
             this.lablecatname.Name = "lablecatname";
             this.lablecatname.Size = new System.Drawing.Size(75, 20);
             this.lablecatname.TabIndex = 0;
@@ -313,24 +331,6 @@
             this.colStatus.MinimumWidth = 6;
             this.colStatus.Name = "colStatus";
             this.colStatus.ReadOnly = true;
-            // 
-            // btnSickCats
-            // 
-            this.btnSickCats.FlatAppearance.BorderSize = 0;
-            this.btnSickCats.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSickCats.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnSickCats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSickCats.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSickCats.ForeColor = System.Drawing.Color.White;
-            this.btnSickCats.Image = global::CatCare.Properties.Resources.icons8_vet_24;
-            this.btnSickCats.Location = new System.Drawing.Point(422, 143);
-            this.btnSickCats.Name = "btnSickCats";
-            this.btnSickCats.Size = new System.Drawing.Size(115, 35);
-            this.btnSickCats.TabIndex = 13;
-            this.btnSickCats.Text = "Sick Cats";
-            this.btnSickCats.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSickCats.UseVisualStyleBackColor = true;
-            this.btnSickCats.Click += new System.EventHandler(this.btnSickCats_Click);
             // 
             // UC_Managecats
             // 
