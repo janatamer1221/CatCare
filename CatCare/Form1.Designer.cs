@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnlSideBar = new System.Windows.Forms.Panel();
-            this.pnlContainer = new System.Windows.Forms.Panel();
             this.btnHealthRecords = new System.Windows.Forms.Button();
             this.btnSchedules = new System.Windows.Forms.Button();
             this.btnManageCats = new System.Windows.Forms.Button();
+            this.pnlContainer = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlSideBar.SuspendLayout();
             this.SuspendLayout();
@@ -52,17 +53,6 @@
             this.pnlSideBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.pnlSideBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.pnlSideBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
-            // 
-            // pnlContainer
-            // 
-            this.pnlContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
-            this.pnlContainer.BackgroundImage = global::CatCare.Properties.Resources.Untitled_design__1_;
-            this.pnlContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(270, 0);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(881, 592);
-            this.pnlContainer.TabIndex = 1;
             // 
             // btnHealthRecords
             // 
@@ -130,6 +120,17 @@
             this.btnManageCats.UseVisualStyleBackColor = true;
             this.btnManageCats.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pnlContainer
+            // 
+            this.pnlContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
+            this.pnlContainer.BackgroundImage = global::CatCare.Properties.Resources.Untitled_design__1_;
+            this.pnlContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(270, 0);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(881, 592);
+            this.pnlContainer.TabIndex = 1;
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -144,6 +145,7 @@
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.pnlSideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cat Care Tracker";
