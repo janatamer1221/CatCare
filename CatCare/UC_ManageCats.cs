@@ -64,6 +64,7 @@ namespace CatCare
                 cmbType.SelectedIndex = -1;
                 cmbStatus.SelectedIndex = -1;
             }
+            DataStore.SaveAllData(manager.GetAllCats().ToList());
 
         }
 

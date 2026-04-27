@@ -16,7 +16,6 @@ namespace CatCare
         public UC_Schedules()
         {
             InitializeComponent();
-            LoadSchedulesToGrid();
             manager.LoadData();
             cmbCatName.Items.Clear();
             Cat[] allCats = manager.GetAllCats();
@@ -27,6 +26,7 @@ namespace CatCare
                     cmbCatName.Items.Add(cat.Name);
                 }
             }
+            LoadSchedulesToGrid();
         }
 
         private void btnAddSchedule_Click(object sender, EventArgs e)
@@ -79,6 +79,7 @@ namespace CatCare
                     }
                 }
             }
+
         }
 
         private void label1_Click(object sender, EventArgs e)
