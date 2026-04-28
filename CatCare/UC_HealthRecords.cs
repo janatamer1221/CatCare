@@ -83,6 +83,7 @@ namespace CatCare
 
                 LoadHealthRecordsToGrid();
                 txtClinicalNotes.Clear();
+                DataStore.SaveAllData(manager.GetAllCats().ToList());
             }
         }
         
